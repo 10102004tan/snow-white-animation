@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+
+          .box{
+               height: 300px;
+               width: 600px;
+               left: 50%;
+               top: 50%;
+               position: absolute;
+               transform: translate(-50%,-50%);
+          }
+          .bar {
+               width: 100%;
+               height: 30px;
+               left: 50%;
+               top: 50%;
+               position: absolute;
+               transform: translate(-50%,-50%);
+               animation: rotate 2s infinite linear;
+          }
+
+          .circle{
+               width: 30px;
+               height: 30px;
+               border-radius: 50%;
+               border: 1px solid #000;
+               position: absolute;
+               top: 0;
+               background-color: #000;
+               left: 0;
+               animation: runCircle 2s infinite ease-in-out;
+               z-index: 1;
+          }
+
+         
+          /* .circle::after{
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               transform: translateX(-80%);
+               z-index: -9;
+               background-color: #9c9a9aa1;
+          } */
+
+          .line{
+               width: 100%;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               height: 2px;
+               background-color: #000;
+               z-index: -1;
+
+          }
+
+          .line:nth-child(2){
+               transform: translate(-50%,-50%) rotate(90deg);
+          }
+
+          .bar:nth-child(2) .circle{
+               animation-delay: 0.2s;
+          }
+
+          .bar:nth-child(3) .circle{
+               animation-delay: 0.4s;
+          }
+
+          .bar:nth-child(4) .circle{
+               animation-delay: 0.6s;
+          }
+
+
+          .bar:nth-child(5) .circle{
+               animation-delay: 0.8s;
+          }
+
+          .bar:nth-child(6) .circle{
+               animation-delay: 1s;
+          }
+
+          .bar:nth-child(2) {
+               animation-delay: 0.2s;
+          }
+
+          .bar:nth-child(3){
+               animation-delay: 0.4s;
+          }
+
+          .bar:nth-child(4){
+               animation-delay: 0.6s;
+          }
+
+
+          .bar:nth-child(5){
+               animation-delay: 0.8s;
+          }
+
+          .bar:nth-child(6){
+               animation-delay: 1s;
+          }
+
+       
+
+          @keyframes runCircle {
+               0%{
+                    left: 0;
+                    animation-delay: 1s;
+               }
+
+              
+
+               50%{
+                    left: calc(100% - 30px);
+               }
+              
+
+               100%{
+                    left: 0;
+               }
+          }
+
+          @keyframes rotate {
+               0%{
+                    transform: translate(-50%,-50%) rotate(0deg);
+               }
+
+               25%{
+                    transform: translate(-50%,-50%) rotate(45deg);
+               }
+
+               50%{
+                    transform: translate(-50%,-50%) rotate(0deg);
+               }
+
+               75%{
+                    transform: translate(-50%,-50%) rotate(-45deg);
+               }
+
+               100%{
+                    transform: translate(-50%,-50%) rotate(0deg);
+               }
+          }
+     </style>
+</head>
+<body>
+     <div class="box">
+         
+          <div class="bar">
+               <div class="circle"></div>
+          </div>
+     
+          <div class="bar">
+               <div class="circle"></div>
+          </div>
+     
+          <div class="bar">
+               <div class="circle"></div>
+          </div>
+     
+          <div class="bar">
+               <div class="circle"></div>
+          </div>
+     
+          <div class="bar">
+               <div class="circle"></div>
+          </div>
+     
+          <div class="bar">
+               <div class="circle"></div>
+          </div>
+     
+          <div class="bar">
+               <div class="circle"></div>
+          </div>
+     
+          <div class="bar">
+               <div class="circle"></div>
+          </div>
+     </div>
+
+     
+
+    
+
+     <div class="line"></div>
+     <div class="line"></div>
+</body>
+</html>

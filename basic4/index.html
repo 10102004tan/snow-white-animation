@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          body {
+              margin: 0px;
+              padding: 0px;
+              box-sizing: border-box;
+              
+          }
+
+          :root {
+               --size : 30px;
+          }
+
+          .route {
+               height: var(--size);
+               display: flex;
+               margin-top: 50px;
+               margin-left: 100px;
+               margin-right: 100px;  
+               flex-direction: row-reverse;
+
+          }
+
+          .station {
+               position: relative;
+          }
+
+          .station:not(:first-child) {
+               flex-grow: 1;
+
+          }
+
+          .station:first-child {
+               width: var(--size);
+               
+          }
+
+          .station::before {
+               content: "";
+               width: 100%;
+               height: 20px;
+               background-color: #02750b;
+               position: absolute;
+               top: 50%;
+               left: 0;
+               transform: translateY(-50%);
+               transition: all 0.4s linear;
+               z-index: -1;
+               
+          }
+
+          .station::after {
+               content: "";
+               width: var(--size);
+               height: var(--size);
+               background-color: #fff;
+               position: absolute;
+               top: 0;
+               left: 0;
+               border-radius: 50%;
+               box-shadow: 0 0 0px 5px #02750b;
+               transition: all 0.25s linear;
+               z-index: 1;
+               cursor: pointer;
+
+          }
+
+          .name {
+               transform: rotate(45deg) translateY(200%);
+               position: absolute;
+               padding-left: 50px;
+               top: 100%;
+               left: 0;
+               white-space: nowrap;
+          }
+
+
+          .station:last-child::after{
+               background-color: red;
+               box-shadow: 0 0 0 5px red;
+          }
+
+
+          .station:focus ~ .station::before{
+              background-color: red;
+          }
+
+          .station:focus ~ .station::after{
+              background-color: #fff;
+              box-shadow: 0 0 0 5px red;
+          }
+
+          .station:focus::after{
+               background-color: red;
+               box-shadow: 0 0 0 5px red;
+          }
+
+          .route .station:hover::after{
+               box-shadow: 0 0 0 5px #fff,
+               0 0 0 10px red;
+               background-color: #fff;
+          }
+        
+     </style>
+</head>
+<body>
+
+     <div class="route">
+          <div class="station" tabindex="8">
+               <div class="name">Ben thanh end</div>
+          </div>
+
+          <div class="station" tabindex="7">
+               <div class="name">Ben thanh</div>
+          </div>
+
+          <div class="station" tabindex="6">
+               <div class="name">Ben thanh</div>
+          </div>
+
+          <div class="station" tabindex="5">
+               <div class="name">Ben thanh</div>
+          </div>
+
+          <div class="station" tabindex="4">
+               <div class="name">Ben thanh</div>
+          </div>
+
+
+          <div class="station" tabindex="3">
+               <div class="name">Ben thanh</div>
+          </div>
+
+
+          <div class="station" tabindex="2">
+               <div class="name">Ben thanh</div>
+          </div>
+
+
+          <div class="station" tabindex="1">
+               <div class="name">Ben thanh</div>
+          </div>
+
+
+          <div class="station" tabindex="0">
+               <div class="name">Ben thanh</div>
+          </div>
+
+          
+     </div>
+</body>
+</html>

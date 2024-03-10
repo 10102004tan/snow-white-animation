@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+
+          
+
+          @keyframes rotate {
+               0%{
+                    transform: translate(-50%,-50%) rotate(-45deg);
+               }
+
+               100%{
+                    transform: translate(-50%,-50%) rotate(45deg);
+               }
+
+          }
+
+          @keyframes runCircle {
+               0%{
+                   left: 0%;
+               }
+
+               100%{
+                    left: calc(100% - 50px);
+               }
+          }
+
+          .box {
+               width: 400px;
+               height: 200px;
+               border-top-left-radius: 50%;
+               border-top-right-radius: 50%;
+               border: 1px solid #000;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               background-color: antiquewhite;
+               transform: translate(-50%,-50%);
+          }
+
+          .bar {
+               width: 100%;
+               height: 30px;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               animation: rotate 2s infinite linear;
+          }
+
+          .circle {
+               width: 30px;
+               height: 30px;
+               border: 1px solid #000;
+               background-color: #000;
+               border-radius: 50%;
+               transform: translateX(-100%);
+          }
+
+          @keyframes rotate {
+               0%{
+                    transform: translate(-50%,-50%) rotate(0deg);
+                    width: 100%;
+               }
+
+               50%{
+                    width: 50%;
+                    transform: translate(-50%,-50%) rotate(90deg);
+               }
+
+               100%{
+                    width: 100%;
+                    transform: translate(-50%,-50%) rotate(180deg);
+               }
+
+          }
+
+     </style>
+</head>
+<body>
+     <!-- <div class="bar">
+          <div class="circle">
+
+          </div>
+     </div> -->
+
+     <div class="box">
+          <div class="bar">
+               <div class="circle"></div>
+          </div>
+     </div>
+</body>
+</html>

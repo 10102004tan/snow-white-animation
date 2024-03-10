@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          .box{
+               width: 600px;
+               height: 300px;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               border: 1px solid #000;
+               transform: translate(-50%,-50%);
+          }
+
+          .bar{
+               position: absolute;
+               top: 50%;
+               /* left: 50%;
+                */
+                left: 50%;
+               width: 50%;
+               transform: translateY(-50%) translateY(-50px) translateX(-50%);
+               height: 30px;
+               border: 1px solid #000;
+               transform-origin: 100% 50%;
+               width: 100px;
+               /* animation: rotate 3s infinite linear alternate; */
+          }
+
+          .circle {
+               width: 30px;
+               height: 30px;
+               border-radius: 50%;
+               border: 1px solid #000;
+               transform: translateX(-50%);
+          }
+
+          @keyframes rotate {
+               0%{
+                    transform: translateY(-50%) rotate(0deg);
+               }
+               
+               50%{
+                    
+               }
+
+               100%{
+                    transform: translateY(-50%) rotate(180deg);
+               }
+          }
+     </style>
+</head>
+<body>
+     <div class="box">
+          <div class="bar">
+               <div class="circle"></div>
+          </div>
+     </div>
+</body>
+</html>
